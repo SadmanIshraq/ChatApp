@@ -14,7 +14,8 @@ class ChatList extends ConsumerStatefulWidget {
   final String recieverUserId;
   const ChatList({
     Key? key,
-    required this.recieverUserId}) :
+    required this.recieverUserId,
+  }) :
         super(key: key);
 
   @override
@@ -49,12 +50,12 @@ class _ChatListState extends ConsumerState<ChatList> {
                   FirebaseAuth.instance.currentUser!.uid) {
                 return MyMessageCard(
                   message: messageData.text,
-                  date: timeSent,
+                  //date: timeSent,
                 );
               }
               return SenderMessageCard(
                 message: messageData.text,
-                date: timeSent,
+                //date: timeSent,
               );
             },
           );
@@ -63,10 +64,3 @@ class _ChatListState extends ConsumerState<ChatList> {
 
   }
   }
-
-/*class ChatList extends ConsumerWidget {
-
-
-  @override
-  Widget build(BuildContext context,WidgetRef ref) {
- */

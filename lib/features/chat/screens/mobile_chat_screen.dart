@@ -19,6 +19,7 @@ class MobileChatScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context,WidgetRef ref) {
     return Scaffold(
+      backgroundColor: Colors.teal[200],
       appBar: AppBar(
         backgroundColor: Colors.grey,
         title: StreamBuilder<UserModel>(

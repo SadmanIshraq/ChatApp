@@ -3,9 +3,9 @@ import 'package:chatapp/colors.dart';
 
 class MyMessageCard extends StatelessWidget {
   final String message;
-  final String date;
 
-  const MyMessageCard({Key? key, required this.message, required this.date}) : super(key: key);
+
+  const MyMessageCard({Key? key, required this.message, }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,16 +18,16 @@ class MyMessageCard extends StatelessWidget {
         child: Card(
           elevation: 1,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-          color: Colors.brown,
+          color: Colors.cyan[800],
           margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
           child: Stack(
             children: [
               Padding(
                 padding: const EdgeInsets.only(
-                  left: 10,
-                  right: 30,
-                  top: 5,
-                  bottom: 20,
+                  left: 13,
+                  right: 17,
+                  top: 10,
+                  bottom: 13,
                 ),
                 child: Text(
                   message,
@@ -37,29 +37,8 @@ class MyMessageCard extends StatelessWidget {
                   ),
                 ),
               ),
-              Positioned(
-                bottom: 4,
-                right: 10,
-                child: Row(
-                  children: [
-                    Text(
-                      date,
-                      style:const TextStyle(
-                        fontSize: 11,
-                        color: Colors.white60,
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 5,
-                    ),
-                    const Icon(
-                      Icons.done_all,
-                      size: 20,
-                      color: Colors.white60,
-                    ),
-                  ],
-                ),
-              ),
+
+
             ],
           ),
         ),

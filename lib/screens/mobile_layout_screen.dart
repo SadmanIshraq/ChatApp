@@ -11,6 +11,7 @@ class MobileLayoutScreen extends StatelessWidget {
     return DefaultTabController(
       length: 3,
       child: Scaffold(
+        backgroundColor: Colors.blue[200],
         appBar: AppBar(
           elevation: 0,
           backgroundColor: Colors.grey,
@@ -18,21 +19,12 @@ class MobileLayoutScreen extends StatelessWidget {
           title: const Text(
             'Chatify',
             style: TextStyle(
-              fontSize: 23,
+              fontSize: 24,
               color: Colors.black,
               fontWeight: FontWeight.bold,
             ),
           ),
-          actions: [
-            IconButton(
-              icon: const Icon(Icons.search, color: Colors.black),
-              onPressed: () {},
-            ),
-            IconButton(
-              icon: const Icon(Icons.more_vert, color: Colors.black),
-              onPressed: () {},
-            ),
-          ],
+
           bottom: const TabBar(
             indicatorColor: Colors.deepPurple,
             indicatorWeight: 6,
@@ -55,9 +47,9 @@ class MobileLayoutScreen extends StatelessWidget {
           onPressed: () {
             Navigator.pushNamed(context, SelectContactsScreen.routeName);
           },
-          backgroundColor: Colors.blue,
+          backgroundColor: Colors.blue[800],
           child: const Icon(
-            Icons.comment,
+            Icons.search,
             color: Colors.white,
           ),
         ),
